@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.table-wrap {
+  overflow-x: scroll;
+  display: block;
+}
+
+table {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  margin: 20px;
+  min-width: 400px;
+  width: 100%;
+}
+
+table th {
+  border: 1px solid #000;
+  padding: 10px;
+  background: #efefef;
+}
+
+table td {
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.table-wrap table th,
+.table-wrap table td {
+  white-space: nowrap;
+}
+
+/* ここからメディアクエリ */
+@media screen and (max-width: 768px) {
+  .table-wrap {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    table-layout: auto;
+  }
+  td {
+    padding: 8px;
+  }
+
+  .table-wrap table th,
+  .table-wrap table td {
+    white-space: normal; 
+    /* ↑ nowrapを解除 */
+    padding: 8px;
+  }
+}
